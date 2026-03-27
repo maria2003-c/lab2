@@ -58,7 +58,16 @@ void * firstList(List * list)
     return NULL;
 }
 
-void * nextList(List * list) {
+void * nextList(List * list) 
+{
+    if(list->current != NULL)
+    {
+        list->current = list->current->next;
+        if(list->current != NULL)
+        {
+            return list->current;
+        }
+    }
     return NULL;
 }
 
