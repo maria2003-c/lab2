@@ -101,7 +101,24 @@ void pushBack(List * list, void * data) {
 
 // 5. Programe la función void pushCurrent(List * list, void* data), la cual agrega un dato a continuación del nodo apuntado por list->current.
 
-void pushCurrent(List * list, void * data) {
+void pushCurrent(List * list, void * data) 
+{
+    Node* nuevo = (Node*)malloc(sizeof(Node));
+    nuevo->data = data;
+
+    Node* curr = list->current;
+    nuevo->next = curr->next;
+    nuevo->prev = curr;
+
+    if(curr->next != NULL)
+    {
+        curr->next->prev = nuevo;
+    }
+    else
+    {
+         list->tail = nuevo;   
+    }
+    
 }
 
 void * popFront(List * list) {
