@@ -69,3 +69,16 @@ list.c:107:6: note: declared here
   107 | void pushCurrent(List * list, void * data)
       |      ^~~~~~~~~~~
 54a3033
+Sat Mar 28 05:53:06 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:109:35: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  109 |     if (list->head == NULL)return NULL;
+      |                                   ^~~~
+list.c:107:6: note: declared here
+  107 | void pushCurrent(List * list, void * data)
+      |      ^~~~~~~~~~~
+5d0ffb5
