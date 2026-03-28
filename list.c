@@ -106,7 +106,7 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) 
 {
-    if (list->head == NULL)return NULL;
+    if (list->head == NULL || list->current == NULL)return;
     
     Node* nuevo = (Node*)malloc(sizeof(Node));
     nuevo->data = data;
@@ -124,6 +124,8 @@ void pushCurrent(List * list, void * data)
     {
          list->tail = nuevo;   
     }
+
+    curr->next = nuevo;
     
 }
 
