@@ -41,7 +41,7 @@ List * createList()
     lista->tail = NULL;
     lista->current = NULL;
     
-    return lista;
+    return list;
 }
 
 // 2. Programe las funciones void * firstList(List * list) y void * nextList(List * list).
@@ -77,7 +77,7 @@ void * nextList(List * list)
 
 void * lastList(List * list) 
 {
-    if (lista->head == NULL)return;
+    if (list->head == NULL)return;
     
     list->current = list->tail;
 

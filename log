@@ -125,3 +125,46 @@ list.c:89:8: note: declared here
    89 | void * prevList(List * list)
       |        ^~~~~~~~
 d4cd6c8
+Mon Mar 30 12:43:36 AM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:44:12: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   44 |     return list;
+      |            ^~~~
+      |            List
+list.c:44:12: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘lastList’:
+list.c:80:28: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   80 |     if (list->head == NULL)return;
+      |                            ^~~~~~
+list.c:78:8: note: declared here
+   78 | void * lastList(List * list)
+      |        ^~~~~~~~
+list.c:84:30: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   84 |     if(list->current == NULL)return;
+      |                              ^~~~~~
+list.c:78:8: note: declared here
+   78 | void * lastList(List * list)
+      |        ^~~~~~~~
+list.c: In function ‘prevList’:
+list.c:91:27: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   91 |     if(list->head == NULL)return;
+      |                           ^~~~~~
+list.c:89:8: note: declared here
+   89 | void * prevList(List * list)
+      |        ^~~~~~~~
+list.c:95:30: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   95 |     if(list->current == NULL)return;
+      |                              ^~~~~~
+list.c:89:8: note: declared here
+   89 | void * prevList(List * list)
+      |        ^~~~~~~~
+list.c: In function ‘createList’:
+list.c:45:1: error: control reaches end of non-void function [-Werror=return-type]
+   45 | }
+      | ^
+cc1: all warnings being treated as errors
+d35c6d0
