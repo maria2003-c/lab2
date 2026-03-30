@@ -264,3 +264,15 @@ Mon Mar 30 01:36:19 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 6872e1b
+Mon Mar 30 01:42:50 AM UTC 2026: 
+ list.c | 13 ++++---------
+ 1 file changed, 4 insertions(+), 9 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:174:32: error: ‘elimimnado’ undeclared (first use in this function); did you mean ‘eliminado’?
+  174 |     if(eliminado->prev != NULL)elimimnado->prev->next = eliminado->next;
+      |                                ^~~~~~~~~~
+      |                                eliminado
+list.c:174:32: note: each undeclared identifier is reported only once for each function it appears in
+28a914a
