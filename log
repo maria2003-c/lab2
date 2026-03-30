@@ -168,3 +168,35 @@ list.c:45:1: error: control reaches end of non-void function [-Werror=return-typ
       | ^
 cc1: all warnings being treated as errors
 d35c6d0
+Mon Mar 30 12:46:30 AM UTC 2026: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:80:28: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   80 |     if (list->head == NULL)return;
+      |                            ^~~~~~
+list.c:78:8: note: declared here
+   78 | void * lastList(List * list)
+      |        ^~~~~~~~
+list.c:84:30: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   84 |     if(list->current == NULL)return;
+      |                              ^~~~~~
+list.c:78:8: note: declared here
+   78 | void * lastList(List * list)
+      |        ^~~~~~~~
+list.c: In function ‘prevList’:
+list.c:91:27: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   91 |     if(list->head == NULL)return;
+      |                           ^~~~~~
+list.c:89:8: note: declared here
+   89 | void * prevList(List * list)
+      |        ^~~~~~~~
+list.c:95:30: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   95 |     if(list->current == NULL)return;
+      |                              ^~~~~~
+list.c:89:8: note: declared here
+   89 | void * prevList(List * list)
+      |        ^~~~~~~~
+52e9a58
