@@ -171,7 +171,7 @@ void * popCurrent(List * list)
     Node* eliminado = list->current;
     void* data = eliminado->data;
 
-    if(eliminado->prev != NULL)elimimnado->prev->next = eliminado->next;
+    if(eliminado->prev != NULL)eliminado->prev->next = eliminado->next;
     else list->head = eliminado->next;
 
     if(eliminado->next != NULL)eliminado->next->prev = eliminado->prev;
