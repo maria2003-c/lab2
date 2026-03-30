@@ -211,3 +211,35 @@ Mon Mar 30 12:56:17 AM UTC 2026:
  tests:  10|2
 total_score: 40/60
 c847ac6
+Mon Mar 30 01:02:35 AM UTC 2026: 
+ list.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:106:5: error: unknown type name ‘node’; did you mean ‘Node’?
+  106 |     node* nuevo = createNode(data);
+      |     ^~~~
+      |     Node
+list.c:106:19: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+  106 |     node* nuevo = createNode(data);
+      |                   ^~~~~~~~~~
+list.c:110:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  110 |         list->head = nuevo;
+      |                    ^
+list.c:111:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  111 |         list->tail = nuevo;
+      |                    ^
+list.c:112:23: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  112 |         list->current = nuevo;
+      |                       ^
+list.c:116:10: error: request for member ‘next’ in something not a structure or union
+  116 |     nuevo->next = list->head;
+      |          ^~
+list.c:117:22: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  117 |     list->head->prev = nuevo;
+      |                      ^
+list.c:118:16: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  118 |     list->head = nuevo;
+      |                ^
+41ddc85
