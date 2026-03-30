@@ -88,3 +88,40 @@ Sat Mar 28 09:59:02 PM UTC 2026:
  tests:  6|3
 total_score: 30/60
 2ee2733
+Mon Mar 30 12:41:53 AM UTC 2026: 
+ list.c | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:80:9: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   80 |     if (lista->head == NULL)return;
+      |         ^~~~~
+      |         list
+list.c:80:9: note: each undeclared identifier is reported only once for each function it appears in
+list.c:80:29: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   80 |     if (lista->head == NULL)return;
+      |                             ^~~~~~
+list.c:78:8: note: declared here
+   78 | void * lastList(List * list)
+      |        ^~~~~~~~
+list.c:84:30: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   84 |     if(list->current == NULL)return;
+      |                              ^~~~~~
+list.c:78:8: note: declared here
+   78 | void * lastList(List * list)
+      |        ^~~~~~~~
+list.c: In function ‘prevList’:
+list.c:91:27: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   91 |     if(list->head == NULL)return;
+      |                           ^~~~~~
+list.c:89:8: note: declared here
+   89 | void * prevList(List * list)
+      |        ^~~~~~~~
+list.c:95:30: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   95 |     if(list->current == NULL)return;
+      |                              ^~~~~~
+list.c:89:8: note: declared here
+   89 | void * prevList(List * list)
+      |        ^~~~~~~~
+d4cd6c8
