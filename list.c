@@ -174,7 +174,7 @@ void * popCurrent(List * list)
     Node* prev = eliminado->prev;
     Node* next = eliminado->next;
 
-    if(next != NULL)prev->next = prev;
+    if(next != NULL)prev->next = next;
     else list->head = next;
 
     if(next != NULL)next->prev = prev;
