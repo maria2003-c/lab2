@@ -243,3 +243,9 @@ list.c:118:16: error: assignment to ‘Node *’ from incompatible pointer type 
   118 |     list->head = nuevo;
       |                ^
 41ddc85
+Mon Mar 30 01:03:35 AM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|1
+total_score: 50/60
+78617f8
