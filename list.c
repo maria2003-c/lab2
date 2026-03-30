@@ -77,22 +77,22 @@ void * nextList(List * list)
 
 void * lastList(List * list) 
 {
-    if (list->head == NULL)return;
+    if (list->head == NULL)return NULL;
     
     list->current = list->tail;
 
-    if(list->current == NULL)return;
+    if(list->current == NULL)return NULL;
     
     return list->current->data;
 }
 
 void * prevList(List * list) 
 {
-    if(list->head == NULL)return;
+    if(list->head == NULL)return NULL;
     
     list->current = list->current->prev;
 
-    if(list->current == NULL)return;
+    if(list->current == NULL)return NULL;
 
     return list->current->data;
 }
